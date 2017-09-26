@@ -1,6 +1,13 @@
 package io.ian.betterforms.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "secrets")
 public class Secret {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     //bean variables are always private
     //these variables are only accessible through getters/setters
     //has mandatory empty constructor, can have others with variables
