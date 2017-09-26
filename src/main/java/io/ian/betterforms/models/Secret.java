@@ -4,6 +4,8 @@ public class Secret {
     //bean variables are always private
     //these variables are only accessible through getters/setters
     //has mandatory empty constructor, can have others with variables
+
+    //need to configure data source for spring.data.jpa in properties
     private long id;
     private String owner;
     private String message;
