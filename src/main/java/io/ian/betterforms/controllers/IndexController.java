@@ -1,6 +1,8 @@
 package io.ian.betterforms.controllers;
 
 import io.ian.betterforms.models.Secret;
+import io.ian.betterforms.repositories.SecretRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -14,17 +16,21 @@ public class IndexController {
 
     private ArrayList<Secret> mySecrets = new ArrayList<>();
 
+    @Autowired
+    private SecretRepository secretRepo;
+
     @RequestMapping(value = "/")
     public String index(Model model) {
         model.addAttribute("secret", new Secret());
-        model.addAttribute("mySecrets", mySecrets);
+        model.addAttribute("mySecrets", secretRepo.findAll());
         return "index";
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public String index(@ModelAttribute Secret secret) {
         System.out.println(secret);
-        mySecrets.add(secret);
+        //mySecrets.add(secret);
+        secretRepo.save(secret);
         return "redirect:/";
     }
 }
