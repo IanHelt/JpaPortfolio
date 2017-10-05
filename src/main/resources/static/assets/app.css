@@ -1,0 +1,99 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.aboutBody{
+    height: 1000px;
+    background-color: #343a40;
+}
+
+.shadeBox {
+    box-shadow: inset 0 0 100px 25px rgba(0, 0, 0, .2), 10px 10px 100px 25px rgba(0, 0, 0, .2);
+    margin: 5% 10%;
+    border-radius: 5%;
+    padding: 2% 1% 3% 1%;
+    border-style: solid;
+    border-color: rgba(0, 20, 45, .2);
+}
+
+.container {
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.aboutContainer {
+    background-color: rgba(255, 255, 255, .9);
+    padding: 5% 0;
+    border-radius: 5%;
+}
+
+.row {
+    flex-wrap: nowrap;
+}
+
+div #nameHeader.row {
+    border-bottom-style: solid;
+    border-bottom-color: #343a40;
+    border-bottom-width: .5em;
+    border-radius: 20%;
+    margin: 0 8%;
+}
+
+div #infoRow.row {
+    margin-bottom: 1%;
+}
+
+.languageBox {
+    display: flex;
+}
+
+.contactInfo {
+    padding-left: 0;
+}
+
+.contactTags {
+    margin-bottom: 0;
+}
+
+.leftMargin {
+    border-right-style: solid;
+    border-right-color: #343a40;
+    border-right-width: .75em;
+    border-radius: 50%;
+    min-height: 100%;
+    text-align: center;
+    color: transparent;
+}
+
+.rightMargin {
+    border-left-style: solid;
+    border-left-color: #343a40;
+    border-left-width: .75em;
+    border-radius: 50%;
+    min-height: 100%;
+    text-align: center;
+    color: transparent;
+}
+
+.footFiller {
+    min-height: 14em;
+}
+
+#bio {
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+#bio .profPic {
+    border-radius: 180px;
+    border: thin solid;
+    height: 250px;
+    width: 180px;
+    margin-right: 2%;
+    float: left;
+}
+
+.bioText {
+   margin-right: 10%;
+}

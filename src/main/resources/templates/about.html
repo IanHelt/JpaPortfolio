@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>About me</title>
+    <link rel="stylesheet" th:href="@{'/webjars/bootstrap/4.0.0-beta/css/bootstrap.min.css'}"/>
+    <link th:href="@{'/assets/app.css'}" rel="stylesheet"/>
+</head>
+<body class="aboutBody">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Project Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="aboutContainer container">
+    <div id="bio">
+        <img class="profPic" th:src="@{'/assets/images/itriednottolooksmug.jpg'}" alt="photo"/>
+        <h2>About Me</h2>
+        <div  class="bioText">
+        <p><!--
+                            The Hidden Truth
+
+            I was born in central Pennsylvania and raised amongst the local
+            Amish population. I spent years bartering away my delicious fresh
+            produce to the local populace, but I always felt as if something was
+            absent from my life. One day at market, I exchanged a single XXL cucumber
+            for a 'CD' with tunes by 'Pearl Jam.' Listening to their gruff jams
+            awoke my passion for flannel shirts, elongated hair, and saying 'yeah'
+            in place of any and all other forms of communication. My family was not pleased,
+            but I hope that in time; they too will come to discover the same euphoric
+            miasma of passion and yeah that is Pearl Jam
+            -->
+            Hey! Looks like you've stumbled upon my about page, I'm so sorry.
+            <br/>
+            <br/>
+            I was born and raised in Lewisburg, Pennsylvania. My history with programming starts sometime around the age of
+            six or seven; which was when I played my first computer game. The game was called Dark Forces, it was set in
+            the Star Wars universe and you played as a rebel fighting against imperial forces. I remember being simultaneously
+             amazed and terrified by the blaster-wielding stormtroopers, because it was just like playing pretend "army" with my friends,
+             except to me these were ACTUAL stormtroopers trying to blow me up.<br/><br/> I've held a fascination for computers ever since then.
+            It wasn't just a fascination in computer games either, I found myself wondering just what they were capable of, what was going on inside the machine,
+            and how to not break them every time I tried to find out the answers to my inquiries. Many years and many fried motherboards later, I became knowledgeable
+            about the hardware side of computing.
+            <br/>
+            <br/>
+             Nowadays I'm focused on improving my skills in software development. Originally I was worried
+            that I'd become disillusioned with the field from working at "desk jobs," but instead I've found that coming up with
+            unique and effective solutions can be an extremely rewarding process in itself. I look forward to growing
+            as a developer so that one day my applications can only be explained with the word "magic."
+        </p>
+        </div>
+    </div>
+</div>
+    <script th:src="@{'webjars/jquery'}"></script>
+    <script th:src="@{'webjars/popper.js'}"></script>
+    <script th:src="@{'webjars/bootstrap'}"></script>
+</body>
+</html>

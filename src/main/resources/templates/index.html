@@ -1,22 +1,114 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Ian Helt</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" th:href="@{'/webjars/bootstrap/4.0.0-beta/css/bootstrap.min.css'}"/>
+    <!-- Custom styles for this template -->
+    <link th:href="@{'/assets/app.css'}" rel="stylesheet"/>
 </head>
 <body>
-    <h1>hi</h1>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Project Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-    <form action="/" th:object="${secret}" method="post">
-        <input type="text" th:field="*{owner}" />
-        <br />
-        <input type="text" th:field="*{message}" />
-        <br />
-        <input type="submit" value="keep that seecc" />
-    </form>
+<div class="shadeBox">
+<!-- Header with Background Image -->
+<header class="business-header">
+    <div class="container">
+        <div class="row" id="nameHeader">
+            <div class="col-lg-12">
+                <h1 class="display-3 text-center mt-4">Ian Helt</h1>
+            </div>
+        </div>
+    </div>
+</header>
 
-<ul>
-    <li th:each="mySecret : ${mySecrets}" th:text="${mySecret.message}"></li>
-</ul>
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row" id="infoRow">
+        <div class="leftMargin col-sm-2">Hello</div>
+        <div class="whoBox col-sm-6">
+            <h2 class="mt-4">Who?</h2>
+            <h7>Software engineer specializing in Back-end development.
+            </h7>
+            <h6>Languages I'm familiar with:</h6>
+            <div class="languageBox">
+            <ul>
+                <li>
+                    <h5>Java</h5>
+                    <p>Spring, Maven, JPA, Thymeleaf, Handlebars</p>
+                </li>
+                <li>
+                    <h5>Javascript</h5>
+                    <p>Node, Express, Passport, Handlebars</p>
+                </li>
+                <li><h5>C#</h5></li>
+            </ul>
+                <ul>
+                    <li>Sequelize</li>
+                    <li>PostgresSQL</li>
+                    <li>MongoDB</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>SCSS</li>
+                </ul>
+            </div>
+        </div>
+        <div class="contactInfo col-sm-2">
+            <h2 class="mt-4">Contact Me</h2>
+            <address>
+                <h5 class="contactTags">Phone</h5>
+                <p class="contactTags">(570) 428-2727</p>
+                <h5 class="contactTags">Email</h5>
+                <a href="mailto:#">ianhelt23@gmail.com</a>
+                <h5 class="contactTags">Social Media</h5>
+                <label class="contactTags" for="ghLink">On </label>
+                <a name="ghLink" href="https://github.com/IanHelt">GitHub</a>
+                <br/>
+                <label class="contactTags" for="liLink">On </label>
+                <a name="liLink" href="https://www.linkedin.com/in/ian-helt-025269150/">LinkedIn</a>
+            </address>
+        </div>
+        <div class="rightMargin col-sm-2">hello</div>
+    </div>
+</div>
+<!-- /.container -->
+</div>
+<!-- Footer -->
+<footer class="footFiller py-5 bg-dark">
+    <div class="container">
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script th:src="@{'webjars/jquery'}"></script>
+<script th:src="@{'webjars/popper.js'}"></script>
+<script th:src="@{'webjars/bootstrap'}"></script>
 </body>
 </html>
